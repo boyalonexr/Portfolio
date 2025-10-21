@@ -74,12 +74,9 @@ function Projects() {
 
   const [page, setPage] = useState(0);
   const projectsPerPage = 3;
+  const totalPages = Math.ceil(projects.length / projectsPerPage);
   const start = page * projectsPerPage;
   const currentProjects = projects.slice(start, start + projectsPerPage);
-
-  const nextPage = () => {
-    setPage((prev) => (prev + 1) % Math.ceil(projects.length / projectsPerPage));
-  };
 
   return (
     <section
@@ -103,7 +100,7 @@ function Projects() {
         user-centered web applications.
       </p>
 
-      {/* === Projects Grid === */}
+      {/* === Project Grid with Animation === */}
       <AnimatePresence mode="wait">
         <motion.div
           key={page}
@@ -172,23 +169,26 @@ function Projects() {
         </motion.div>
       </AnimatePresence>
 
-      {/* === Circle Next Button === */}
-      <motion.button
-        onClick={nextPage}
-        whileHover={{
-          scale: 1.2,
-          boxShadow: "0 0 15px rgba(139,92,246,0.6)",
-        }}
-        whileTap={{ scale: 0.9 }}
-        transition={{ type: "spring", stiffness: 200 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 w-8 h-8 bg-[#8b5cf6] rounded-full flex items-center justify-center cursor-pointer shadow-lg"
-      >
-        <motion.span
-          animate={{ y: [0, 4, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="block w-2 h-2 bg-white rounded-full"
-        />
-      </motion.button>
+      {/* === Pagination Dots === */}
+      <div className="absolute z-10 bottom-10 flex gap-4">
+        {Array.from({ length: totalPages }).map((_, index) => (
+          <motion.button
+            key={index}
+            onClick={() => setPage(index)}
+            whileHover={{ scale: 1.2 }}
+            whileTap={{ scale: 0.9 }}
+            className={`w-4 h-4 rounded-full transition-all duration-300 ${
+              index === page
+                ? "bg-[#8b5cf6] shadow-[0_0_10px_#8b5cf6]"
+                : "bg-gray-600 hover:bg-[#8b5cf6]/60"
+            }`}
+          />
+        ))}
+      </div>
+
+      {/* === Background Glow === */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black via-transparent to-transparent" />
+      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#8b5cf6]/20 rounded-full blur-[140px]" />
     </section>
   );
 }
