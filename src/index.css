@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  --accent: 138,92,246; /* purple rgb for glows */
+  --accent2: 59,130,246; /* blue rgb */
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0a0a0a;
+}
+
+.font {
+   font-family: 'Poppins', 'sans-serif'
+}
+
+.background {
+  background-image: url(./assets/heroImg.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.typewriter-caret {
+  width: 2px;
+  height: 1.05em;
+  background: rgb(var(--accent));
+  display: inline-block;
+  margin-left: 6px;
+  animation: blink 1s infinite;
+}
+
+.hero-gradient {
+  background: radial-gradient(600px 300px at 10% 40%, rgba(139,92,246,0.12), transparent), radial-gradient(500px 250px at 90% 60%, rgba(59,130,246,0.08), transparent);
+}
+
+.dark .hero-gradient {
+  background: radial-gradient(600px 300px at 10% 40%, rgba(139,92,246,0.15), transparent), radial-gradient(500px 250px at 90% 60%, rgba(59,130,246,0.10), transparent);
+}
+
