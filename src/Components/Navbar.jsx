@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Sparkles,
   Menu,
   X,
   Home,
@@ -17,8 +16,8 @@ function Navbar() {
 
   const navLinks = [
     { id: "home", label: "Home", icon: <Home size={22} /> },
-    { id: "about", label: "About", icon: <User size={22} /> },
     { id: "skills", label: "Skills", icon: <Code2 size={22} /> },
+    { id: "about", label: "About", icon: <User size={22} /> },
     { id: "projects", label: "Projects", icon: <Folder size={22} /> },
     { id: "contact", label: "Contact", icon: <Mail size={22} /> },
   ];
@@ -56,14 +55,6 @@ function Navbar() {
             Port
             <span className="text-[#8b5cf6]">folio</span>
           </h1>
-
-          {/* Animated Icon */}
-          <motion.div
-            animate={{ rotate: [0, 360] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-          >
-            <Sparkles className="text-[#8b5cf6] w-5 h-5" />
-          </motion.div>
         </div>
 
          {/* === Desktop Navigation Links === */}
@@ -112,7 +103,7 @@ function Navbar() {
                   smooth
                   duration={500}
                   onClick={() => setIsOpen(false)}
-                  className="cursor-pointer group-hover:text-[#8b5cf6] transition-colors"
+                  className="cursor-pointer group-hover:text-[#8b5cf6] transition-colors w-full"
                   >
                     {link.label}
                 </Link>

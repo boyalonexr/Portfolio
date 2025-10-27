@@ -4,7 +4,7 @@ import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from "./Components/About";
 import Skill from "./Components/Skill"
-import Projects from "./Components/Projects";
+import Projects from "./Components/Projects.jsx";
 import Contact from "./Components/Contact";
 import './App.css'
 
@@ -17,12 +17,12 @@ function App() {
   
 
   return (
-    loading ? <Loading /> : 
+    // loading ? <Loading /> : 
     <>
     <Navbar />
     <Hero />
-    <About />
     <Skill />
+    <About />
     <Projects />
     <Contact />
     </>

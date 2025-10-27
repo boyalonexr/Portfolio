@@ -4,14 +4,17 @@ function About() {
   return (
     <section
       id="about"
-      className="relative flex justify-center bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-950 dark:to-black py-20 px-6 md:px-16 lg:px-32"
+      className="relative flex justify-center py-20 px-6 md:px-16 lg:px-32 background-lower z-0 h-screen"
     >
+      {/* === DARK OVERLAY ON TOP OF BACKGROUND === */}
+      <div className="absolute inset-0 bg-black/50" />
+      
         {/* About Text */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-center w-full md:text-left max-w-md md:max-w-2xl "
+          className="relative z-10 text-center w-full md:text-left max-w-md md:max-w-2xl flex flex-col justify-center"
         >
           <h2 className="text-3xl text-center md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             About <span className="text-purple-500">Me</span>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroDesImg from "../assets/hero.jpeg";
+import heroDesImg from "../assets/hero.png";
 import Typewriter from './Typewriter'
 
 function Hero() {
@@ -15,7 +15,7 @@ function Hero() {
     >
 
       {/* === DARK OVERLAY ON TOP OF BACKGROUND === */}
-      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* === LEFT: Profile Picture === */}
       <motion.div
@@ -24,7 +24,7 @@ function Hero() {
         transition={{ duration: 0.7 }}
         className="relative flex items-center justify-center z-10"
       >
-        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#6d28d9] p-1 shadow-[0_0_25px_rgba(139,92,246,0.5)]">
+        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#6d28d9] p-1">
           <img
             src={heroDesImg}
             alt="Chidubem Victor"
