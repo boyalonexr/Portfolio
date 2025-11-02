@@ -7,7 +7,7 @@ function About() {
       className="relative flex justify-center py-20 px-6 md:px-16 lg:px-32 background-lower z-0 h-screen"
     >
       {/* === DARK OVERLAY ON TOP OF BACKGROUND === */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
       
         {/* About Text */}
         <motion.div

@@ -15,7 +15,7 @@ function Hero() {
     >
 
       {/* === DARK OVERLAY ON TOP OF BACKGROUND === */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/60" />
 
       {/* === LEFT: Profile Picture === */}
       <motion.div
