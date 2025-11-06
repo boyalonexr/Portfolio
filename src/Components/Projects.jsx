@@ -49,7 +49,7 @@ function Projects() {
                 scale: 1.03,
                 boxShadow: "0 0 20px rgba(139,92,246,0.25)",
               }}
-              className="relative z-10 bg-[#111] rounded-2xl overflow-hidden shadow-md transition-all duration-300 border border-[rgba(139,92,246,0.1)]"
+              className="relative z-10 bg-[#111]/50 rounded-2xl overflow-hidden shadow-md transition-all duration-300 border border-[rgba(139,92,246,0.1)]"
             >
               <div className="overflow-hidden h-48">
                 <img

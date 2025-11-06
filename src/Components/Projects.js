@@ -5,38 +5,28 @@ import journal from '../assets/journal.png'
 
 
 const projects = [
-    {
-      id: 1,
-      title: "Flix Earn",
-      description:
-        "A modern video reward platform where users earn coins by watching videos. Built with cutting-edge technologies for optimal performance and user experience.",
-      tech: ["React", "Tailwind CSS", "Framer Motion"],
-      github: "https://github.com/boyalonexr/flixEarn",
-      live: "https://flix-earn.netlify.app/",
-      image: flixEarn,
-    },
-    {
-      id: 2,
-      title: "Sayara App",
-      description:
-        "A responsive vehicle marketplace clone featuring animated page transitions with Framer Motion, interactive car listings, and a sleek UI for a smooth user experience.",
+  {
+    id: 1,
+    title: "Sayara App",
+    description:
+    "A responsive vehicle marketplace clone featuring animated page transitions with Framer Motion, interactive car listings, and a sleek UI for a smooth user experience.",
       tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
       github: "https://github.com/boyalonexr/Soyara-clone-app",
       live: "https://sayara-clone-app.netlify.app/",
       image: SayaraImg,
     },
     {
-      id: 3,
+      id: 2,
       title: "Movie Preview Website",
       description:
         "The is a responsive web app for discovering films and managing a personal watchlist where users can search for movies and add to their watchlist.",
-      tech: ["JavaScript", "API Intergration", "HTML5", "CSS3"],
-      github: "https://github.com/boyalonexr/Movie-Preview-Website",
+        tech: ["JavaScript", "API Intergration", "HTML5", "CSS3"],
+        github: "https://github.com/boyalonexr/Movie-Preview-Website",
       live: "https://movie-preview-website.netlify.app/",
       image: moviePreview,
     },
     {
-      id: 4,
+      id: 3,
       title: "Learning Journal",
       description:
         "A real-time chat app built using Socket.io and React with smooth animations and typing indicators.",
@@ -44,6 +34,16 @@ const projects = [
       github: "https://github.com/boyalonexr/Learning-Journal-App",
       live: "https://learning-journal-boyalone.netlify.app/",
       image: journal,
+    },
+    {
+      id: 4,
+      title: "Flix Earn",
+      description:
+        "A modern video reward platform where users earn coins by watching videos. Built with cutting-edge technologies for optimal performance and user experience.",
+      tech: ["React", "Tailwind CSS", "Framer Motion"],
+      github: "https://github.com/boyalonexr/flixEarn",
+      live: "https://flix-earn.netlify.app/",
+      image: flixEarn,
     },
     // {
     //   id: 5,

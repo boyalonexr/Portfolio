@@ -15,7 +15,7 @@ function Hero() {
     >
 
       {/* === DARK OVERLAY ON TOP OF BACKGROUND === */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* === LEFT: Profile Picture === */}
       <motion.div
@@ -104,7 +104,7 @@ function Hero() {
                 transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
               />
             </div>
-            <span className="text-gray-500 text-xs uppercase tracking-widest">Scroll</span>
+            {/* <span className="text-gray-500 text-xs uppercase tracking-widest">Scroll</span> */}
           </div>
 
           {/* Mobile Down Arrow */}
