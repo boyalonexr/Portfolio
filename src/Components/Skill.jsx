@@ -7,7 +7,7 @@ import {
   FaGithub,
   FaFigma,
 } from "react-icons/fa";
-import { SiJavascript, SiTailwindcss, SiVite, SiExpress, } from "react-icons/si";
+import { SiJavascript, SiTailwindcss, SiVite, SiNodedotjs, } from "react-icons/si";
 
 function Skill() {
   const skills = [
@@ -20,7 +20,7 @@ function Skill() {
     { id: 7, name: "GitHub", color: "#ffffff", icon: <FaGithub /> },
     { id: 8, name: "Vite", color: "#646CFF", icon: <SiVite /> },
     { id: 9, name: "Figma", color: "#F24E1E", icon: <FaFigma /> },
-    { id: 10, name: "Express.js", color: "#68A063", icon: <SiExpress /> },
+    { id: 10, name: "Node.js", color: "#68A063", icon: <SiNodedotjs /> },
   ];
 
   return (
