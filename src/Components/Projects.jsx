@@ -23,7 +23,7 @@ function Projects() {
         viewport={{ once: true }}
         className="text-3xl md:text-4xl font-bold mb-6 text-center"
       >
-        My <span className="text-[#8b5cf6]">Projects</span>
+        My <span className="text-[#3B82F6]">Projects</span>
       </motion.div>
 
       {/* === Description === */}
@@ -47,7 +47,7 @@ function Projects() {
               key={project.id}
               whileHover={{
                 scale: 1.03,
-                boxShadow: "0 0 20px rgba(139,92,246,0.25)",
+                boxShadow: "0 0 20px rgba(59,130,246,0.25)", // blue glow
               }}
               className="relative z-10 bg-gray-800/60 rounded-2xl overflow-hidden shadow-md transition-all duration-300 pb-4"
             >
@@ -55,9 +55,11 @@ function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>
+
               <div className="p-6 flex flex-col justify-between h-60">
                 <div>
                   <h3 className="text-xl font-semibold mb-2 text-white">
@@ -66,22 +68,27 @@ function Projects() {
                   <p className="text-gray-300 text-sm mb-3 line-clamp-3">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2 text-[#8b5cf6]  text-xs">
+
+                  {/* Tech tags */}
+                  <div className="flex flex-wrap gap-2 text-[#3B82F6] text-xs">
                     {project.tech.map((tech, index) => (
                       <span 
                         key={index}
-                        className="bg-[#8b5cf6]/20 px-2 py-1 rounded-md"
-                       >
-                        {tech}</span>
+                        className="bg-[#3B82F6]/20 px-2 py-1 rounded-md"
+                      >
+                        {tech}
+                      </span>
                     ))}
                   </div>
                 </div>
+
+                {/* Buttons */}
                 <div className="mt-4 flex gap-4">
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm bg-[#8b5cf6] px-3 py-2 rounded-md hover:bg-[#7c3aed] transition-colors"
+                    className="flex items-center gap-1 text-sm bg-[#3B82F6] px-3 py-2 rounded-md hover:bg-[#2563EB] transition-colors"
                   >
                     <FaGithub /> Code
                   </a>
@@ -89,7 +96,7 @@ function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm bg-[#8b5cf6] px-3 py-2 rounded-md hover:bg-[#7c3aed] transition-colors"
+                    className="flex items-center gap-1 text-sm bg-[#3B82F6] px-3 py-2 rounded-md hover:bg-[#2563EB] transition-colors"
                   >
                     <FaExternalLinkAlt /> Live
                   </a>
@@ -110,8 +117,8 @@ function Projects() {
             whileTap={{ scale: 0.9 }}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === page
-                ? "bg-[#8b5cf6] shadow-[0_0_10px_#8b5cf6]"
-                : "bg-gray-600 hover:bg-[#8b5cf6]/60"
+                ? "bg-[#3B82F6] shadow-[0_0_10px_#3B82F6]" // Active page
+                : "bg-gray-600 hover:bg-[#3B82F6]/60"
             }`}
           />
         ))}

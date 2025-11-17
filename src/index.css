@@ -4,7 +4,7 @@
 
 
 :root {
-  --accent: 138,92,246; /* purple rgb for glows */
+  --accent: 59,130,246; /* purple rgb for glows */
   --accent2: 59,130,246; /* blue rgb */
   line-height: 1.5;
   font-weight: 400;
@@ -19,7 +19,7 @@
 }
 
 .background {
-  background-image: url(./assets/heroImg.jpeg);
+  background-image: url(https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763368185/rsz_1heroimg_fmsx4r_xzme1w.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 
 .background-lower {
-  background-image: url(./assets/heroImg.jpeg);
+  background-image: url(https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763368185/rsz_1heroimg_fmsx4r_xzme1w.jpg);
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -41,30 +41,4 @@
   display: inline-block;
   margin-left: 6px;
   animation: blink 1s infinite;
-}
-
-.loading-container {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #0f0f11;
-}
-
-.ripple-wrapper {
-  position: relative;
-  width: 60px;
-  height: 60px;
-}
-
-.ripple {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 3px solid #8b5cf6;
-  border-radius: 50%;
-  opacity: 0;
 }

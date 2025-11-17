@@ -1,14 +1,15 @@
 import { motion } from "framer-motion";
-import heroDesImg from "../assets/hero.png";
 import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
 import Typewriter from "./Typewriter";
 
 function Hero() {
   const socials = [
-    { id: 1, name: "GitHub", icon: <FaGithub />, href: "https://github.com/boyalonexr", color: "#8b5cf6" },
+    { id: 1, name: "GitHub", icon: <FaGithub />, href: "https://github.com/boyalonexr", color: "#3B82F6" },
     { id: 2, name: "Twitter", icon: <FaTwitter />, href: "https://twitter.com/yourhandle", color: "#1DA1F2" },
     { id: 3, name: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/chidubem-victor-969443305", color: "#0A66C2" },
   ];
+
+  const profileImg = "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367492/rsz_hero_xzktzu_uem3ly.png"
 
   return (
     <section
@@ -16,7 +17,7 @@ function Hero() {
       className="
         relative min-h-screen flex flex-col-reverse lg:flex-row 
         items-center justify-center lg:justify-between
-        px-6 sm:px-10 lg:px-20 py-16 gap-16 
+        px-6 sm:px-10 lg:px-20 py-16 gap-6 
         text-white bg-white overflow-hidden background
       "
     >
@@ -33,7 +34,7 @@ function Hero() {
         <p className="text-gray-300 text-lg">Hi, I am</p>
 
         <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-          Chidubem  Victor
+          Chidubem Victor
         </h1>
 
         <div className="flex justify-center lg:justify-start">
@@ -56,7 +57,7 @@ function Hero() {
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 rounded-xl bg-[#8b5cf6] text-white font-semibold shadow-lg transition"
+            className="px-6 py-3 rounded-xl bg-[#3B82F6] text-white font-semibold shadow-lg transition"
           >
             View Projects
           </motion.a>
@@ -65,7 +66,7 @@ function Hero() {
             href="/resume.docx"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 rounded-xl border-2 border-[#8b5cf6] text-[#8b5cf6] font-semibold hover:bg-[#8b5cf6]/10 transition"
+            className="px-6 py-3 rounded-xl border-2 border-[#3B82F6] text-[#3B82F6] font-semibold hover:bg-[#3B82F6]/10 transition"
           >
             Resume
           </motion.a>
@@ -101,16 +102,15 @@ function Hero() {
         className="relative flex z-10 justify-center w-full lg:w-1/2"
       >
         <div className="relative w-64 h-64 sm:w-60 sm:h-60 lg:w-[22rem] lg:h-[22rem] 
-          rounded-full p-1 bg-gray-900/50"
+          rounded-full p-1 mt-10 lg:mt-0 bg-gray-900/50"
         >
           <img
-            src={heroDesImg}
-            alt="Chidubem Victor"
+            src={profileImg}
+            loading="lazy"
             className="w-full h-full object-cover rounded-full border-2 border-gray-400"
           />
         </div>
       </motion.div>
-
 
       {/* SCROLL INDICATOR */}
       <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
@@ -118,7 +118,7 @@ function Hero() {
         <div className="hidden md:flex flex-col items-center space-y-2">
           <div className="w-6 h-10 rounded-full border-2 border-gray-400 flex justify-center items-start p-1">
             <motion.div
-              className="w-1.5 h-2 bg-[#8b5cf6] rounded-full"
+              className="w-1.5 h-2 bg-[#3B82F6] rounded-full"
               animate={{ y: [0, 6, 0], opacity: [1, 0.3, 1] }}
               transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
             />
@@ -127,7 +127,7 @@ function Hero() {
 
         {/* Mobile Arrow */}
         <motion.div
-          className="block md:hidden text-[#8b5cf6]"
+          className="block md:hidden text-[#3B82F6]"
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
         >

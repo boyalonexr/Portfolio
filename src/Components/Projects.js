@@ -1,8 +1,3 @@
-import SayaraImg from '../assets/sayara-img.png'
-import moviePreview from '../assets/movie-preview.png'
-import flixEarn from '../assets/flix-earn1.png'
-import journal from '../assets/journal.png'
-
 
 const projects = [
   {
@@ -13,7 +8,7 @@ const projects = [
       tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
       github: "https://github.com/boyalonexr/Soyara-clone-app",
       live: "https://sayara-clone-app.netlify.app/",
-      image: SayaraImg,
+      image: "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367964/rsz_1sayara-img_jpr8co_hwmp6j.png",
     },
     {
       id: 2,
@@ -23,7 +18,7 @@ const projects = [
         tech: ["JavaScript", "API Intergration", "HTML5", "CSS3"],
         github: "https://github.com/boyalonexr/Movie-Preview-Website",
       live: "https://movie-preview-website.netlify.app/",
-      image: moviePreview,
+      image: "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367972/rsz_movie-preview_qagvpg_yezu8h.png",
     },
     {
       id: 3,
@@ -33,7 +28,7 @@ const projects = [
       tech: ["JavaScript", "HTML5", "CSS3"],
       github: "https://github.com/boyalonexr/Learning-Journal-App",
       live: "https://learning-journal-boyalone.netlify.app/",
-      image: journal,
+      image: "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367986/rsz_1journal_umedsm_mzjd4p.png",
     },
     {
       id: 4,
@@ -43,7 +38,7 @@ const projects = [
       tech: ["React", "Tailwind CSS", "Framer Motion"],
       github: "https://github.com/boyalonexr/flixEarn",
       live: "https://flix-earn.netlify.app/",
-      image: flixEarn,
+      image: "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367194/rsz_1flix-earn1_weoaox_kk5int.png",
     },
     // {
     //   id: 5,
