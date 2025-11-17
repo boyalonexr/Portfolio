@@ -13,7 +13,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="relative min-h-screen flex flex-col items-center justify-center bg-black text-white px-6 md:px-20 py-20 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-6 md:px-20 py-20 overflow-hidden"
     >
       {/* === Section Heading === */}
       <motion.div
@@ -49,7 +49,7 @@ function Projects() {
                 scale: 1.03,
                 boxShadow: "0 0 20px rgba(139,92,246,0.25)",
               }}
-              className="relative z-10 bg-[#111]/50 rounded-2xl overflow-hidden shadow-md transition-all duration-300 border border-[rgba(139,92,246,0.1)]"
+              className="relative z-10 bg-gray-800/60 rounded-2xl overflow-hidden shadow-md transition-all duration-300 pb-4"
             >
               <div className="overflow-hidden h-48">
                 <img
@@ -60,20 +60,19 @@ function Projects() {
               </div>
               <div className="p-6 flex flex-col justify-between h-60">
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-[#8b5cf6]">
+                  <h3 className="text-xl font-semibold mb-2 text-white">
                     {project.title}
                   </h3>
-                  <p className="text-gray-400 line-clamp-3 text-sm mb-3">
+                  <p className="text-gray-300 text-sm mb-3 line-clamp-3">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 text-[#8b5cf6]  text-xs">
                     {project.tech.map((tech, index) => (
-                      <span
+                      <span 
                         key={index}
-                        className="text-xs bg-[#8b5cf6]/20 text-[#8b5cf6] px-2 py-1 rounded-md"
-                      >
-                        {tech}
-                      </span>
+                        className="bg-[#8b5cf6]/20 px-2 py-1 rounded-md"
+                       >
+                        {tech}</span>
                     ))}
                   </div>
                 </div>
@@ -82,7 +81,7 @@ function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm hover:text-[#8b5cf6] transition-colors"
+                    className="flex items-center gap-1 text-sm bg-[#8b5cf6] px-3 py-2 rounded-md hover:bg-[#7c3aed] transition-colors"
                   >
                     <FaGithub /> Code
                   </a>
@@ -90,7 +89,7 @@ function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-sm hover:text-[#8b5cf6] transition-colors"
+                    className="flex items-center gap-1 text-sm bg-[#8b5cf6] px-3 py-2 rounded-md hover:bg-[#7c3aed] transition-colors"
                   >
                     <FaExternalLinkAlt /> Live
                   </a>
@@ -117,10 +116,6 @@ function Projects() {
           />
         ))}
       </div>
-
-      {/* === Background Glow === */}
-      <div className="absolute inset-0 -z-1 bg-gradient-to-t from-black via-transparent to-transparent" />
-      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#8b5cf6]/20 rounded-full blur-[140px]" />
     </section>
   );
 }

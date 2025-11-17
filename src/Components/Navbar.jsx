@@ -46,7 +46,7 @@ function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.45 }}
-      className="fixed top-0 left-0 w-full z-50 bg-black/50 backdrop-blur-md shadow-md font"
+      className="fixed top-0 left-0 w-full z-50 bg- backdrop-blur-md shadow-md font"
     >
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
         {/* === Logo Section === */}

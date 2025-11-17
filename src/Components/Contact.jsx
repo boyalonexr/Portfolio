@@ -3,9 +3,6 @@ import {
   FaEnvelope,
   FaPhoneAlt,
   FaMapMarkerAlt,
-  FaGithub,
-  FaTwitter,
-  FaLinkedin,
 } from "react-icons/fa";
 
 function Contact() {
@@ -14,12 +11,6 @@ function Contact() {
     { id: 2,  href: "tel:+2349162821139", name: "Phone", label: "+234 916 282 1139", icon: <FaPhoneAlt />, hover: true},
     { id: 3, name: "Location", label: "Enugu, Nigeria", icon: <FaMapMarkerAlt />, hover: false},
   ]
-
-   const socials = [
-    { id: 1, name: "GitHub", icon: <FaGithub />, href: "https://github.com/boyalonexr",color: "#8b5cf6"},
-    { id: 2, name: "Twitter", icon: <FaTwitter />, href: "https://twitter.com/yourhandle", color: "#1DA1F2"},
-    { id: 3, name: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/chidubem-victor-969443305", color: "#0A66C2"},
-  ];
 
   return (
     <section
@@ -123,35 +114,8 @@ function Contact() {
         </motion.form>
       </div>
 
-      {/* === Social Media Links at Bottom === */}
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2 }}
-        viewport={{ once: true }}
-        className="flex items-center justify-center gap-8 mb-4"
-      >
-         {socials.map((social) => (
-          <motion.a
-            key={social.id}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              scale: 1.3,
-              rotate: 8,
-              color: social.color,
-            }}
-            whileTap={{ scale: 0.95 }}
-            className="text-2xl relative z-10 text-gray-400 hover:text-[#8b5cf6] transition-all duration-300"
-          >
-            {social.icon}
-          </motion.a>
-        ))}
-      </motion.div>
-
       {/* === Footer Text === */}
-      <p className="text-gray-500 text-sm text-center">
+      <p className="text-white text-sm text-center">
         © {new Date().getFullYear()}{" "}
         <span className="text-[#8b5cf6] font-medium">BoyAlone</span>. All rights reserved.
       </p>

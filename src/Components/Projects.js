@@ -7,7 +7,7 @@ import journal from '../assets/journal.png'
 const projects = [
   {
     id: 1,
-    title: "Sayara App",
+    title: "Sayara Motorparts",
     description:
     "A responsive vehicle marketplace clone featuring animated page transitions with Framer Motion, interactive car listings, and a sleek UI for a smooth user experience.",
       tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],

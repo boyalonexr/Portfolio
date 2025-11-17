@@ -34,7 +34,7 @@ export default function Typewriter({ phrases = [], speed = 80, pause = 1400 }) {
   }, []);
 
   return (
-    <div className="text-gray-300 text-lg flex items-center">
+    <div className="text-[#8b5cf6] text-lg flex items-center">
       <div className="mr-2">{phrases[index].substring(0, subIndex)}</div>
       <div className="typewriter-caret" style={{ background: `rgb(var(--accent))`, opacity: blink ? 1 : 0 }} />
     </div>

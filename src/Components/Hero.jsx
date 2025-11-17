@@ -1,60 +1,42 @@
 import { motion } from "framer-motion";
 import heroDesImg from "../assets/hero.png";
-import Typewriter from './Typewriter'
+import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa";
+import Typewriter from "./Typewriter";
 
 function Hero() {
+  const socials = [
+    { id: 1, name: "GitHub", icon: <FaGithub />, href: "https://github.com/boyalonexr", color: "#8b5cf6" },
+    { id: 2, name: "Twitter", icon: <FaTwitter />, href: "https://twitter.com/yourhandle", color: "#1DA1F2" },
+    { id: 3, name: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/chidubem-victor-969443305", color: "#0A66C2" },
+  ];
+
   return (
     <section
       id="home"
       className="
-        relative min-h-screen flex flex-col md:flex-row 
-        items-center z-0 justify-center gap-20 px-6 md:px-20 
-        bg-black text-white overflow-hidden 
-        background 
+        relative min-h-screen flex flex-col-reverse lg:flex-row 
+        items-center justify-center lg:justify-between
+        px-6 sm:px-10 lg:px-20 py-16 gap-16 
+        text-white bg-white overflow-hidden background
       "
     >
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/70 z-0" />
 
-      {/* === DARK OVERLAY ON TOP OF BACKGROUND === */}
-      <div className="absolute inset-0 bg-black/50" />
-
-      {/* === LEFT: Profile Picture === */}
-      <motion.div
-        initial={{ opacity: 0, x: -60 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7 }}
-        className="relative flex items-center justify-center z-10"
-      >
-        <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full bg-gradient-to-tr from-[#8b5cf6] to-[#6d28d9] p-1">
-          <img
-            src={heroDesImg}
-            alt="Chidubem Victor"
-            className="w-full h-full object-cover rounded-full border-4 border-black"
-          />
-        </div>
-
-        {/* Floating glow animation */}
-        <motion.div
-          className="absolute w-16 h-16 bg-[#8b5cf6]/20 rounded-full blur-2xl"
-          animate={{ x: [0, 20, 0], y: [0, -15, 0] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        />
-      </motion.div>
-
-      {/* === RIGHT: Introduction Text === */}
+      {/* RIGHT — TEXT */}
       <motion.div
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-center md:text-left max-w-md z-10 space-y-3"
+        className="z-10 max-w-xl text-center lg:text-left space-y-4 w-full lg:w-1/2"
       >
-        <p className="text-lg text-gray-300">Hi, I am</p>
-        <h1 className="text-4xl md:text-5xl font-bold">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400 font-extrabold">
-            Chidubem Victor
-          </span>
+        <p className="text-gray-300 text-lg">Hi, I am</p>
+
+        <h1 className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+          Chidubem  Victor
         </h1>
 
-        <span className="flex justify-center md:justify-start">
+        <div className="flex justify-center lg:justify-start">
           <Typewriter
             phrases={[
               "Frontend Developer",
@@ -62,73 +44,101 @@ function Hero() {
               "Design-minded • Accessibility-first",
             ]}
           />
-        </span>
+        </div>
 
-        <p className="text-gray-400 leading-relaxed">
-          A passionate <span className="text-[#8b5cf6]">Frontend Developer</span> who loves building
-          modern, interactive, and responsive user experiences with React, Tailwind, and creative UI
-          design.
+        <p className="text-gray-300 leading-relaxed max-w-md mx-auto lg:mx-0">
+          I build modern, interactive, and accessible frontend experiences using React, Tailwind, and creative UI engineering.
         </p>
 
-        {/* CTA Buttons */}
-        <div className="mt-9 flex flex-wrap gap-4 justify-center md:justify-start">
+        {/* CTA BUTTONS */}
+        <div className="flex flex-wrap gap-6 justify-center lg:justify-start mt-4">
           <motion.a
             href="#projects"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-5 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium shadow-glow-lg hover:scale-105 transition transform"
+            className="px-6 py-3 rounded-xl bg-[#8b5cf6] text-white font-semibold shadow-lg transition"
           >
             View Projects
           </motion.a>
 
           <motion.a
             href="/resume.docx"
-            
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-2 border border-[#8b5cf6] text-[#8b5cf6] font-medium rounded-xl hover:bg-[#8b5cf6]/10 transition-all"
+            className="px-6 py-3 rounded-xl border-2 border-[#8b5cf6] text-[#8b5cf6] font-semibold hover:bg-[#8b5cf6]/10 transition"
           >
             Resume
           </motion.a>
         </div>
+
+        {/* SOCIAL ICONS */}
+        <div className="flex items-center py-3 pt-3 gap-6 justify-center lg:justify-start">
+          {socials.map((social) => (
+            <motion.a
+              key={social.id}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.3,
+                rotate: 8,
+                color: social.color,
+              }}
+              whileTap={{ scale: 0.95 }}
+              className="text-2xl text-gray-400 transition-all duration-300"
+            >
+              {social.icon}
+            </motion.a>
+          ))}
+        </div>
       </motion.div>
 
-      {/* === Scroll Indicator (Mouse for Desktop / Arrow for Mobile) === */}
-        <div className="absolute bottom-6 left-0 right-0 flex justify-center z-20">
-          {/* Desktop Mouse Scroll Indicator */}
-          <div className="hidden md:flex flex-col items-center space-y-2">
-            <div className="w-6 h-10 rounded-full border-2 border-gray-400 flex justify-center items-start p-1">
-              <motion.div
-                className="w-1.5 h-2 bg-[#8b5cf6] rounded-full"
-                animate={{ y: [0, 6, 0], opacity: [1, 0.3, 1] }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </div>
-            {/* <span className="text-gray-500 text-xs uppercase tracking-widest">Scroll</span> */}
-          </div>
-
-          {/* Mobile Down Arrow */}
-          <motion.div
-            className="block md:hidden text-[#8b5cf6]"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.6}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-              />
-            </svg>
-          </motion.div>
+      {/* LEFT — IMAGE */}
+      <motion.div
+        initial={{ opacity: 0, x: -60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        className="relative flex z-10 justify-center w-full lg:w-1/2"
+      >
+        <div className="relative w-64 h-64 sm:w-60 sm:h-60 lg:w-[22rem] lg:h-[22rem] 
+          rounded-full p-1 bg-gray-900/50"
+        >
+          <img
+            src={heroDesImg}
+            alt="Chidubem Victor"
+            className="w-full h-full object-cover rounded-full border-2 border-gray-400"
+          />
         </div>
+      </motion.div>
+
+
+      {/* SCROLL INDICATOR */}
+      <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
+        {/* Desktop Mouse Scroll */}
+        <div className="hidden md:flex flex-col items-center space-y-2">
+          <div className="w-6 h-10 rounded-full border-2 border-gray-400 flex justify-center items-start p-1">
+            <motion.div
+              className="w-1.5 h-2 bg-[#8b5cf6] rounded-full"
+              animate={{ y: [0, 6, 0], opacity: [1, 0.3, 1] }}
+              transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </div>
+        </div>
+
+        {/* Mobile Arrow */}
+        <motion.div
+          className="block md:hidden text-[#8b5cf6]"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+               strokeWidth={1.6} stroke="currentColor"
+               className="w-7 h-7">
+            <path strokeLinecap="round" strokeLinejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </motion.div>
+      </div>
     </section>
   );
 }
