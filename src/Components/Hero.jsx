@@ -106,7 +106,6 @@ function Hero() {
         >
           <img
             src={profileImg}
-            loading="lazy"
             className="w-full h-full object-cover rounded-full border-2 border-gray-400"
           />
         </div>
