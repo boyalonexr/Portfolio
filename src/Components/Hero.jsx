@@ -29,7 +29,7 @@ function Hero() {
         initial={{ opacity: 0, x: 60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="z-10 max-w-xl text-center lg:text-left space-y-4 w-full lg:w-1/2"
+        className="z-10 max-w-xl text-center lg:text-left space-y-4 lg:mt-16 w-full lg:w-1/2"
       >
         <p className="text-gray-300 text-lg">Hi, I am</p>
 
@@ -99,7 +99,7 @@ function Hero() {
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
-        className="relative flex z-10 justify-center w-full lg:w-1/2"
+        className="relative flex justify-end z-10 w-full lg:w-1/2"
       >
         <div className="relative w-64 h-64 sm:w-60 sm:h-60 lg:w-[22rem] lg:h-[22rem] 
           rounded-full p-1 mt-10 lg:mt-0 bg-gray-900/50"
