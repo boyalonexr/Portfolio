@@ -112,7 +112,7 @@ function Hero() {
       </motion.div>
 
       {/* SCROLL INDICATOR */}
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center z-20">
+      <div className="absolute bottom-2 left-0 right-0 flex justify-center z-20">
         {/* Desktop Mouse Scroll */}
         <div className="hidden md:flex flex-col items-center space-y-2">
           <div className="w-6 h-10 rounded-full border-2 border-gray-400 flex justify-center items-start p-1">
