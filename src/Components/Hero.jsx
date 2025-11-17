@@ -99,7 +99,7 @@ function Hero() {
         initial={{ opacity: 0, x: -60 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
-        className="relative flex justify-end z-10 w-full lg:w-1/2"
+        className="relative flex justify-center lg:justify-end z-10 w-full lg:w-1/2"
       >
         <div className="relative w-64 h-64 sm:w-60 sm:h-60 lg:w-[22rem] lg:h-[22rem] 
           rounded-full p-1 mt-10 lg:mt-0 bg-gray-900/50"
