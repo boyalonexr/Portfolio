@@ -24,11 +24,11 @@ const projects = [
       id: 3,
       title: "Learning Journal",
       description:
-        "A real-time chat app built using Socket.io and React with smooth animations and typing indicators.",
-      tech: ["JavaScript", "HTML5", "CSS3"],
-      github: "https://github.com/boyalonexr/Learning-Journal-App",
-      live: "https://learning-journal-boyalone.netlify.app/",
-      image: "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367986/rsz_1journal_umedsm_mzjd4p.png",
+        "A personal learning journal app for documenting insights, tracking progress, and reflecting on daily learning experiences. Built with a clean interface and smooth user interactions.",
+        tech: ["JavaScript", "HTML5", "CSS3"],
+        github: "https://github.com/boyalonexr/Learning-Journal-App",
+        live: "https://learning-journal-boyalone.netlify.app/",
+        image: "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367986/rsz_1journal_umedsm_mzjd4p.png",
     },
     {
       id: 4,

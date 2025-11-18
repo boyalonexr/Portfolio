@@ -6,7 +6,7 @@ function About() {
       role: "FRONTEND DEVELOPER",
       company: "Taacodeep Technologies",
       location: "Nsukka, Enugu State",
-      date: "2023 - Present",
+      date: "2022 - 2024",
       points: [
         "Developed responsive website layouts using HTML, CSS, and JavaScript.",
         "Created user-centered UI mockups and prototypes following design best practices.",
