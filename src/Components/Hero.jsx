@@ -9,7 +9,7 @@ function Hero() {
     { id: 3, name: "LinkedIn", icon: <FaLinkedin />, href: "https://www.linkedin.com/in/chidubem-victor-969443305", color: "#0A66C2" },
   ];
 
-  const profileImg = "https://res.cloudinary.com/dmg0ohw7r/image/upload/v1763367492/rsz_hero_xzktzu_uem3ly.png"
+  const profileImg = "https://res.cloudinary.com/dmg0ohw7r/image/upload/f_auto,q_auto/v1763367492/rsz_hero_xzktzu_uem3ly.png"
 
   return (
     <section
